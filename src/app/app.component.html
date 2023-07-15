@@ -5,35 +5,10 @@
 </div>
 <div>
   <h4 [ngClass]="'redClass'">
-    Welcome in Angular Data Binding with interpolation, {{ userName }}
+    Welcome in Angular Pipe, {{ userName | uppercase }}
   </h4>
-</div>
-<div>
-  <h4 [attr.class]="'blueClass'">
-    Welcome in Angular Data Binding with Attribute Binding
-  </h4>
-</div>
-<div>
-  <h4 [ngClass]="'redClass'" [innerText]="innerText"></h4>
-</div>
-<div>
-  <h4
-    [ngClass]="{ blueClass: true, fontBold: cssFontBold }"
-    [innerText]="innerEventText"
-  ></h4>
-  <button value="Click" (click)="OncClick(!cssFontBold)">Click</button>
-</div>
-<div>
-  <h4 [ngClass]="'greenClass'">Welcome in Angular two way Data Binding</h4>
-  Enter Name :
-  <input [value]="userName" (input)="userName = $event.target.value" /><br />
-  Your Name :{{ userName }}
   <br />
   <h4 [ngClass]="'greenClass'">
-    Welcome in Angular two way Data Binding using ngModel (to use ngModel need
-    to import ngModule and FormsModule)
+    Welcome in Angular Custom Pipe, {{ userName | truncate }}
   </h4>
-  Enter Friend Name :
-  <input [(ngModel)]="friendName" /><br />
-  Your Friend Name :{{ friendName }}
 </div>
